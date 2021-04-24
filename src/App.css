@@ -85,6 +85,8 @@ table {
     letter-spacing: 1px;
     display: flex;
     align-items: flex-end;
+    color: #000;
+    text-decoration: none;
 }
 
 .main-header .title::after{

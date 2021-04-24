@@ -12,7 +12,7 @@ const PostContent = (post) => {
                     <img className="post-image" src={image} />
                 </picture>
             </div>
-            <h2><Link to="/" className="post-title">{title}</Link></h2>
+            {slug ? <h2><Link to={slug} className="post-title">{title}</Link></h2> : <h2 className="post-title">{title}</h2>}
             {excerpt && <p className="post-excerpt">{Helper.removeMarkers(excerpt)}</p>}
             {slug && <Link className="read-more" to={slug}>Czytaj dalej</Link>}
             {content && <div>{ReactHtmlParser(content)}</div>}
