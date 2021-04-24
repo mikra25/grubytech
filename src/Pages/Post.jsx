@@ -2,6 +2,7 @@ import {useParams} from 'react-router-dom';
 import {useEffect, useState} from "react";
 import api from "../api/api";
 import PostContent from "../Components/PostContent";
+import CommentForm from "../Components/CommentForm";
 
 
 const NotFound = () => {
@@ -38,7 +39,12 @@ const Post = () => {
     return(
         <>
             {notFound && <NotFound /> }
-            {post && <PostContent {...post} /> }
+            {post &&
+                <>
+                    <PostContent {...post} />
+                    <CommentForm id={post.id} />
+                </>
+            }
         </>
     )
 }

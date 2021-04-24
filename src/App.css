@@ -150,3 +150,72 @@ table {
     color: #fff;
     background: #f47e00;
 }
+
+.comment-form{
+    padding: 30px 0;
+    border-top: 1px dotted #ddd;
+}
+
+.comment-form .leave-comment{
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.comment-form .email-info{
+    font-size: 13px;
+    color: #575757;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.comment-form .input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e2e2e2;
+    outline: transparent;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.comment-form .input.error{
+    border-color: #BB2124;
+}
+
+.comment-form .input-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+}
+
+.comment-form .submit{
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 10px 20px;
+    background: #fff;
+    font-size: 14px;
+    color: #000;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.comment-form .submit:hover{
+    background: #ddd;
+}
+
+.comment-form .info{
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.comment-form .info.error{
+    background: #BB2124;
+}
+
+.comment-form .info.success{
+    background: #22BB33;
+}
