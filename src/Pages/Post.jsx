@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import api from "../api/api";
 import PostContent from "../Components/PostContent";
 import CommentForm from "../Components/CommentForm";
+import CommentWrapper from "../Components/CommentWrapper";
 
 
 const NotFound = () => {
@@ -25,7 +26,6 @@ const Post = () => {
                 setNotFound(true);
             }
             else{
-                console.log(response.data[0])
                 setPost({
                     id: response.data[0].id,
                     title: response.data[0].title.rendered,
@@ -42,7 +42,7 @@ const Post = () => {
             {post &&
                 <>
                     <PostContent {...post} />
-                    <CommentForm id={post.id} />
+                    <CommentWrapper id={post.id} />
                 </>
             }
         </>
